@@ -10,3 +10,13 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+#idea
+junit-selenium/.idea/
+junit-selenium/junit-selenium.iml
+
+#Output
+junit-selenium/target/
+
+#Results
+junit-selenium/reports/
