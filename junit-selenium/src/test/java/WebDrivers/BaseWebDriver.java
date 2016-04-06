@@ -1,5 +1,7 @@
 package WebDrivers;
 
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -37,6 +39,12 @@ public class BaseWebDriver {
             Instance = new ChromeDriver();
             new WebDriverWait(Instance, 5);
             System.out.println("Chrome Driver initialized");
+
+            //Set browser window size & position
+            Point point = new Point(0,0);
+            Instance.manage().window().setPosition(point);
+            Instance.manage().window().setSize(new Dimension(1260,900));
+            Instance.manage().window().maximize();
 
         }
     }
