@@ -1,5 +1,5 @@
 /**
- * Created by michalwysoczanski on 05/04/16.
+ * Created by wysocz on 05/04/16.
  */
 
 import cucumber.api.CucumberOptions;

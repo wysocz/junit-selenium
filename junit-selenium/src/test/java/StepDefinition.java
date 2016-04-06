@@ -1,5 +1,6 @@
 import PageObjects.Extras;
 import PageObjects.Homepage;
+import PageObjects.Payment;
 import PageObjects.SecondPage;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -7,7 +8,7 @@ import cucumber.api.java.en.When;
 import org.junit.Assert;
 
 /**
- * Created by michalwysoczanski on 05/04/16.
+ * Created by wysocz on 05/04/16.
  */
 
 
@@ -40,6 +41,8 @@ public class StepDefinition {
         Extras extras = secondPage.clickContinue();
         extras.isOnPage();
         extras.closePopup();
-        extras.clickContinue();
+        Payment payment = extras.clickContinue();
+        payment.firstAdult();
+        payment.secondAdult();
     }
 }

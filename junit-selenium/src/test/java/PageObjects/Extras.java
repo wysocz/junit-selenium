@@ -10,13 +10,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.IOException;
 
 /**
- * Created by michalwysoczanski on 06/04/16.
+ * Created by wysocz on 06/04/16.
  */
 public class Extras extends Homepage{
 
     private static final By locatorCloseBtn = By.xpath("//*[@id=\"ngdialog1\"]/div[2]/div[1]/div/div[1]/div[2]/div/dialog-title/div/div[2]");
     private static final By locatorPopup = By.xpath("//*[@id=\"ngdialog1\"]/div[2]/div[1]/div/div[1]/div[2]/div/dialog-title/div/div[1]");
-    private static final By locatorContent = By.xpath("/html/body/div[2]/main/div[1]/div/div[1]/div[2]");
     private static final By locatorContinue = By.xpath("//*[@id=\"booking-selection\"]/article/div[2]/section/div[2]/button");
     private static final String baseUrl = "https://www.ryanair.com/pl/pl/booking/extras";
 
@@ -50,13 +49,17 @@ public class Extras extends Homepage{
 
     }
 
-    public void clickContinue() throws InterruptedException {
+    public Payment clickContinue() throws InterruptedException {
+
+        //TODO get rid of this ugly wait
+
         Thread.sleep(2000);
 
         WebElement button = new WebDriverWait(BaseWebDriver.Instance, BaseWebDriver.getInstance().TIMEOUT)
                 .until(ExpectedConditions.presenceOfElementLocated(locatorContinue));
         button.click();
 
+        return new Payment();
     }
 
 }

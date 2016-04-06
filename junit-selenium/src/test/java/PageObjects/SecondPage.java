@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.IOException;
 
 /**
- * Created by michalwysoczanski on 06/04/16.
+ * Created by wysocz on 06/04/16.
  */
 public class SecondPage  extends Homepage{
 
