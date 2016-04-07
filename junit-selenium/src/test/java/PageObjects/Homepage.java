@@ -125,7 +125,7 @@ public class Homepage extends Helper {
     public SecondPage submit() {
 
         WebElement submit = new WebDriverWait(BaseWebDriver.Instance, BaseWebDriver.getInstance().TIMEOUT)
-                .until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#search-container > div > div > form > div.col-flight-search-right > button:nth-child(2) > span")));
+                .until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div.col-flight-search-right > button:nth-child(2)")));
 
         submit.click();
 

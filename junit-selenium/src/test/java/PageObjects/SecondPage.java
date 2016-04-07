@@ -30,6 +30,7 @@ public class SecondPage  extends Homepage{
     }
     public static void isOnPage() {
 
+
         WebElement title = new WebDriverWait(BaseWebDriver.Instance, BaseWebDriver.getInstance().TIMEOUT)
                 .until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#booking-selection > article > div.flight-title")));
 
