@@ -22,6 +22,9 @@ public class Payment {
     private static final By locatorSelectSecond = By.xpath("//*[@id=\"checkout\"]/div/form/div[1]/div[1]/div/div[2]/ng-form/div[2]/div/ng-form/div[1]/div[1]/div/select");
     private static final By locatorSecondName = By.xpath("//*[@id=\"checkout\"]/div/form/div[1]/div[1]/div/div[2]/ng-form/div[2]/div/ng-form/div[1]/div[2]/input");
     private static final By locatorSecondLastName = By.xpath("//*[@id=\"checkout\"]/div/form/div[1]/div[1]/div/div[2]/ng-form/div[2]/div/ng-form/div[1]/div[3]/input");
+    private static final By locatorContactEmail = By.xpath("//*[@id=\\\"payment-contact-form\\\"]/div[2]/contact-details-form/div/div[1]/div[2]/input");
+    private static final By locatorContactCountry = By.xpath("//*[@id=\"payment-contact-form\"]/div[2]/contact-details-form/div/div[1]/div[3]/div/div[1]/div/select");
+    private static final By locatorContactPhone = By.xpath("//*[@id=\"payment-contact-form\"]/div[2]/contact-details-form/div/div[1]/div[3]/div/div[2]/input");
     private static final By locatorPay = By.xpath("//*[@id=\"payment-contact-form\"]/div[2]/div[6]/button");
     private static final String baseUrl = "https://www.ryanair.com/pl/pl/booking/payment";
 
@@ -90,6 +93,12 @@ public class Payment {
         surname.sendKeys("Smith");
 
     }
+
+
+    public void contact() {
+
+    }
+
 
     public void pay() throws InterruptedException {
 
