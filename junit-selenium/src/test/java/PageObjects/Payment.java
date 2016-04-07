@@ -197,12 +197,13 @@ public class Payment extends Extras{
 
     public void cardValidationAlert(){
 
-        WebElement alert = new WebDriverWait(BaseWebDriver.Instance, BaseWebDriver.getInstance().TIMEOUT)
+        //TODO get rid of this nasty wait here. Implement processing state handler.
+        WebElement alert = new WebDriverWait(BaseWebDriver.Instance, 20)
                 .until(ExpectedConditions.presenceOfElementLocated(locatorAlert));
 
         Assert.assertTrue("Card Validation Alert is not visible", alert.isDisplayed());
 
-        System.out.println(alert.getText());
+        Assert.assertTrue("Alert has wrong heading", alert.getText().startsWith("Oj. Wystąpił problem"));
 
     }
 
